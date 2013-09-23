@@ -8,9 +8,14 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'paperclip', '~> 3.5.1'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'rspec-rails'
+  gem 'capybara', '~> 2.1.0'
 end
 
 group :doc do

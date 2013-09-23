@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: okevents_development
   pool: 5
-  username: okevents
+  username: jeffreyrichardson
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,13 +48,7 @@ test:
   encoding: unicode
   database: okevents_test
   pool: 5
-  username: okevents
+  username: jeffreyrichardson
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: okevents_production
-  pool: 5
-  username: okevents
-  password:
+
