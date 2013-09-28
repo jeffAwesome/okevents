@@ -9,8 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'paperclip', '~> 3.5.1'
-
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'devise'
 
 group :test, :development do
   gem 'dotenv-rails'

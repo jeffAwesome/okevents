@@ -1,4 +1,5 @@
-require_relative '../spec_helper'
+require 'spec_helper'
+include Capybara::DSL
 
 feature 'View the homepage' do
   scenario 'user sees relevant information' do
