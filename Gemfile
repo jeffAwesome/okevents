@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'paperclip', '~> 3.5.1'
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'simple_form'
 
 group :test, :development do
   gem 'dotenv-rails'
