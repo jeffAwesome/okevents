@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '4.0.0'
 gem 'pg'
@@ -11,7 +11,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'paperclip', '~> 3.5.1'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
+gem 'american_date', '~> 1.1.0'
 
 group :test, :development do
   gem 'dotenv-rails'

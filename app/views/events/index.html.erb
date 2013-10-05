@@ -19,7 +19,7 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.location %></td>
-        <td><%= event.date %></td>
+        <td><%= event.date.strftime("%m/%d/%y") %></td>
         <td><%= event.description %></td>
         <td><%= event.website %></td>
         <td><%= link_to 'Show', event %></td>
