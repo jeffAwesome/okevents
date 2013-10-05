@@ -1,35 +1,21 @@
-<h1>Events</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Description</th>
-      <th>Website</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.location %></td>
-        <td><%= event.date.strftime("%m/%d/%y") %></td>
-        <td><%= event.description %></td>
-        <td><%= event.website %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="row-fluid">
+    <% @events.each_with_index do |event, index| %>
+      <% if index == 0 %>
+        <div class="span12 large-scale clearfix" style="background-image: <%= event.photo %>">
+      <% else %>
+        <div class="span3" style="background-image: <%= event.photo %>">
+      <% end %>
+        <%= link_to event do %>
+          <%= event.title %>
+          <%= event.location %>
+          <%= event.date.strftime("%m/%d/%y") %>
+          <%= event.description %>
+          <%= event.website %>
+          <% link_to 'Edit', edit_event_path(event) %>
+          <% link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+</div>
 
 <%= link_to 'New Event', new_event_path %>
