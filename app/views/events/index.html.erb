@@ -6,11 +6,15 @@
         <div class="span3" style="background-image: <%= event.photo %>">
       <% end %>
         <%= link_to event do %>
-          <%= event.title %>
-          <%= event.location %>
-          <%= event.date.strftime("%m/%d/%y") %>
-          <%= event.description %>
-          <%= event.website %>
+          <span class="month">
+            <%= event.date.month %>
+          </span>
+          <span class="day">
+            <%= event.date.day %>
+          </span>
+          <div class="title">
+            <%= event.title %>
+          </div>
           <% link_to 'Edit', edit_event_path(event) %>
           <% link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
