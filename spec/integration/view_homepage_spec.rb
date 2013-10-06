@@ -1,20 +1,13 @@
 require 'spec_helper'
 include Capybara::DSL
 
-def setup
-  user = User.create(:email    => "alindeman@example.com",
-                     :password => "ilovegrapes")
-
-  visit "/users/sign_in"
-  fill_in "Email",    :with => "alindeman@example.com"
-  fill_in "Password", :with => "ilovegrapes"
-  click_button "Sign in"
-end
-
 feature 'View the homepage' do
-  scenario 'user sees relevant information' do
+    scenario 'user sees event listings' do
+    Event.create(title: 'Flaming Lips', location: 'Okc', date: '2013/10/15')
     visit root_path
-    expect(page).to have_css 'h1', text: 'Events'
+    page.should have_content('Flaming Lips')
+    page.should have_content('10')
+    page.should have_content('15')
   end
 end
 
