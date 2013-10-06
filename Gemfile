@@ -14,6 +14,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
 gem 'american_date', '~> 1.1.0'
+gem 'travis-lint', '~> 1.7.0'
 
 group :test, :development do
   gem 'dotenv-rails'
