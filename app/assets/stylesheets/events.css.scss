@@ -1,3 +1,89 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Featured */
+.large-scale {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  max-height: 700px;
+  height: 700px;
+}
+
+/* Ok events */
+.okevents {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top right;
+  display: block;
+  max-height: 360px;
+  height: 360px;
+  position: relative;
+  a {
+    display: block;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.event-info {
+  display: block;
+  background: #efefef;
+  color: #eee;
+  &:hover {
+    &:before {
+      background: #18a7bc;
+    }
+  }
+  &:before {
+    content: '+';
+    background: #aaa;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 40px;
+    &:hover {
+      background: #18a7bc;
+    }
+  }
+  span, div {
+    display: block;
+    &.month {
+      font-size: 20px;
+    }
+    &.day {
+      font-size: 65px;
+      line-height: 1em;
+    }
+  }
+  div.event-date {
+    padding: 20px;
+  }
+  div.title {
+    background: #ddd;
+    padding: 10px 20px;
+    min-height: 40px;
+  }
+}
+
+
+/* Events show */
+
+.events-show {
+  .body-container {
+    background-color: rgba(0,0,0, 0.7);
+  }
+}

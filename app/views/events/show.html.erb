@@ -1,9 +1,40 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
+  body {
+    background: transparent url(<%= @event.photo %>) no-repeat 0 0 fixed;
+    background-size: 100% 100%;
+    min-height: 100%;
+    height: 100%;
+  }
+</style>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+
+<div class="event">
+  <h2 class="eventTitle"> <%= @event.title %> </h2>
+  <div class="event-date">
+    <%= @event.event_month @event.date.month %>
+    <%= @event.date.day %>
+    <%= @event.date.year %>
+    <% if @event.time %>
+      / <%= @event.time %>
+    <% end %>
+  </div><!--//event-date-->
+
+  <ul class="social-icon">
+    <li><a href="#">Add to Bookmark</a></li>
+    <li><a href="#">Share to Faceboo</a></li>
+    <li><a href="#">Share to Twitter</a></li>
+  </ul>
+
+  <div class="event-description">
+    <%= @event.description %>
+    <% if @event.website %>
+      <%= @event.website %>
+    <% end %>
+  </div><!--//event-description-->
+
+
+</div><!--//event-->
+
 
 <p>
   <strong>Location:</strong>
@@ -15,19 +46,6 @@
   <%= @event.date.strftime("%m/%d/%y") %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @event.website %>
-</p>
-<p>
-  <strong>photo:</strong>
-  <%= image_tag @event.photo %>
-</p>
 
 
 

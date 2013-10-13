@@ -10,3 +10,8 @@
 .row-fluid [class*="span"] {
   margin-left: 1.564%;
 }
+
+.span3.okevents {
+  margin: 0;
+  width: 25%;
+}
