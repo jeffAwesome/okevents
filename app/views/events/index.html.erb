@@ -1,7 +1,7 @@
 <div class="row-fluid">
     <% @events.each_with_index do |event, index| %>
       <% if index == 0 %>
-        <div class="span12 large-scale clearfix" style="background-image: url(<%= event.photo %>)">
+        <div class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
       <% else %>
         <div class="span3 okevents" style="background-image: url(<%= event.photo %>)">
       <% end %>
