@@ -31,6 +31,8 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-datepicker-rails (1.1.1.8)
       railties (>= 3.0)
+    bootstrap-timepicker-rails-addon (0.2.5.1)
+      railties (>= 3.1, < 5.0)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -169,6 +171,7 @@ PLATFORMS
 DEPENDENCIES
   american_date (~> 1.1.0)
   bootstrap-datepicker-rails
+  bootstrap-timepicker-rails-addon (~> 0.2.5.1)
   capybara (~> 2.1.0)
   coffee-rails (~> 4.0.0)
   devise

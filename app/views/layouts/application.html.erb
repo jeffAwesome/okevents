@@ -7,14 +7,21 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<% @body_class = controller_name.parameterize.to_s+'-'+action_name.to_s %>
+
+<body class="<%=@body_class%>">
+<div class="body-container">
 <% if notice %>
   <p class="notice"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert"><%= alert %></p>
 <% end %>
+
+<div class="contentContainer">
 <%= yield %>
+</div><!--//container-->
+</div><!--//body container -->
 
 </body>
 </html>

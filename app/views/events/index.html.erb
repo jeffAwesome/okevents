@@ -1,17 +1,19 @@
 <div class="row-fluid">
     <% @events.each_with_index do |event, index| %>
       <% if index == 0 %>
-        <div class="span12 large-scale clearfix" style="background-image: <%= event.photo %>">
+        <div class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
       <% else %>
-        <div class="span3" style="background-image: <%= event.photo %>">
+        <div class="span3 okevents" style="background-image: url(<%= event.photo %>)">
       <% end %>
-        <%= link_to event do %>
-          <span class="month">
-            <%= event.date.month %>
-          </span>
-          <span class="day">
-            <%= event.date.day %>
-          </span>
+        <%= link_to event, { class: 'event-info' } do %>
+          <div class="event-date">
+            <span class="month">
+              <%= event.event_month event.date.month %>
+            </span>
+            <span class="day">
+              <%= event.date.day %>
+            </span>
+          </div>
           <div class="title">
             <%= event.title %>
           </div>
