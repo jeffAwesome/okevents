@@ -19,3 +19,12 @@ h1,h2,h3,h4,h5,h6 {
   margin: 10px 0;
   font-weight: normal;
 }
+
+
+#user_nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255, 0.7);
+  z-index: 999;
+}
