@@ -9,14 +9,17 @@
 
 
 <div class="event">
-  <h2 class="eventTitle"> <%= @event.title %> </h2>
+  <h2 class="event-title"> <%= @event.title %> </h2>
   <div class="event-date">
     <%= @event.event_month @event.date.month %>
     <%= @event.date.day %>
     <%= @event.date.year %>
     <% if @event.time %>
-      / <%= @event.time %>
+      / <%= @event.event_time @event.time %>
     <% end %>
+    <div class="event-location">
+      at <%= @event.location %>
+    </div>
   </div><!--//event-date-->
 
   <ul class="social-icon">
@@ -26,6 +29,7 @@
   </ul>
 
   <div class="event-description">
+    <h3>About This Event</h3>
     <%= @event.description %>
     <% if @event.website %>
       <%= @event.website %>
@@ -36,18 +40,8 @@
 </div><!--//event-->
 
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date.strftime("%m/%d/%y") %>
-</p>
-
-
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+<% end %>

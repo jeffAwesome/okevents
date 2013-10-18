@@ -9,4 +9,8 @@ class Event < ActiveRecord::Base
     months[month-1]
   end
 
+  def event_time time
+    time.strftime("%I:%M%p")
+  end
+
 end
