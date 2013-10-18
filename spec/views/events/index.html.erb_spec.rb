@@ -13,7 +13,7 @@ describe "events/index" do
       stub_model(Event,
         :title => "Flaming Lips",
         :location => "Okc",
-        :date => "2013/10/15",
+        :date => "2015/10/15",
         :description => "MyText",
         :website => "Website"
       ),
@@ -31,7 +31,7 @@ describe "events/index" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "div.large-scale div.title", :text => "Flaming Lips".to_s
-    assert_select "div span.month", :text => "10".to_s
+    assert_select "div span.month", :text => "Oct".to_s
     assert_select "div span.day", :text => "15".to_s
   end
 end
