@@ -30,6 +30,7 @@
     height: 180px;
     position: absolute;
     bottom: 0;
+    color: #000;
     right: 0;
     &:hover {
       text-decoration: none;
@@ -83,6 +84,26 @@
     min-height: 40px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .span3.okevents {
+    width: 33% !important;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .span3.okevents {
+    width: 50% !important;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .span3.okevents {
+    width: 100% !important;
+  }
+}
+
 
 
 /* Events show */

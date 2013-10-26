@@ -1,9 +1,9 @@
-<div class="row-fluid">
+<section class="row-fluid">
     <% @events.each_with_index do |event, index| %>
       <% if index == 0 %>
-        <div class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
+        <article class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
       <% else %>
-        <div class="span3 okevents" style="background-image: url(<%= event.photo %>)">
+        <article class="span3 okevents" style="background-image: url(<%= event.photo %>)">
       <% end %>
         <%= link_to event, { class: 'event-info' } do %>
           <div class="event-date">
@@ -17,11 +17,8 @@
           <div class="title">
             <%= event.title %>
           </div>
-          <% link_to 'Edit', edit_event_path(event) %>
-          <% link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
-      </div>
+      </article>
     <% end %>
-</div>
+</section>
 
-<%= link_to 'New Event', new_event_path %>
