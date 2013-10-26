@@ -30,7 +30,7 @@ describe "events/index" do
   it "renders a list of events" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "div.large-scale div.title", :text => "Flaming Lips".to_s
+    assert_select ".large-scale div.title", :text => "Flaming Lips".to_s
     assert_select "div span.month", :text => "Oct".to_s
     assert_select "div span.day", :text => "15".to_s
   end
