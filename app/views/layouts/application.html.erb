@@ -8,8 +8,10 @@
   <%= csrf_meta_tags %>
 </head>
 <% @body_class = controller_name.parameterize.to_s+'-'+action_name.to_s %>
+<%=signedinClass = "signedin" if user_signed_in? %>
 
-<body class="<%=@body_class%>">
+
+<body class="<%=@body_class%> <%= signedinClass %>">
 <div class="body-container">
   <%= render 'shared/user_nav' %>
 <% if notice %>
