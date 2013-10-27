@@ -22,10 +22,11 @@
     </div>
   </div><!--//event-date-->
 
+  <% share_url = URI::escape(request.original_url) %>
+  <% share_text = URI::escape(@event.title) %>
   <ul class="social-icon">
-    <li><a href="#">Add to Bookmark</a></li>
-    <li><a href="#">Share to Faceboo</a></li>
-    <li><a href="#">Share to Twitter</a></li>
+    <li><a href="https://www.facebook.com/sharer/sharer.php?u=<%=share_url%>">Share on Facebook</a></li>
+    <li><a href="http://twitter.com/share?text=<%= share_text %>&url=<%= share_url %>">Share  on Twitter</a></li>
   </ul>
 
   <div class="event-description">
