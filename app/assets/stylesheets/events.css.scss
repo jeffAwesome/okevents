@@ -30,7 +30,7 @@
   height: 360px;
   overflow: hidden;
   position: relative;
-  a {
+  .event-info {
     display: block;
     width: 180px;
     height: 180px;
@@ -45,7 +45,6 @@
 }
 
 .event-info {
-  display: block;
   background: #efefef;
   color: #eee;
   &:hover {

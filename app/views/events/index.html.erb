@@ -1,24 +1,26 @@
 <section class="row-fluid">
     <% @events.each_with_index do |event, index| %>
-      <% if index == 0 %>
-        <article class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
-      <% else %>
-        <article class="span3 okevents" style="background-image: url(<%= event.photo %>)">
-      <% end %>
-        <%= link_to event, { class: 'event-info' } do %>
-          <div class="event-date">
-            <span class="month">
-              <%= event.event_month event.date.month %>
-            </span>
-            <span class="day">
-              <%= event.date.day %>
-            </span>
-          </div>
-          <div class="title">
-            <%= event.title %>
-          </div>
+      <%= link_to event, { class: 'event-show' } do %>
+        <% if index == 0 %>
+          <article class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
+        <% else %>
+          <article class="span3 okevents" style="background-image: url(<%= event.photo %>)">
         <% end %>
-      </article>
+            <div class="event-info">
+              <div class="event-date">
+                <span class="month">
+                  <%= event.event_month event.date.month %>
+                </span>
+                <span class="day">
+                  <%= event.date.day %>
+                </span>
+              </div>
+              <div class="title">
+                <%= event.title %>
+              </div>
+            </div>
+          </article>
+      <% end %>
     <% end %>
 </section>
 
