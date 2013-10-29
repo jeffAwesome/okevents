@@ -24,7 +24,7 @@ group :test, :development do
   gem 'capybara', '~> 2.1.0'
 end
 
-group :staging, :production do
+group :production do
     gem 'rails_12factor'  # Heroku gem for logging and asset serving
 end
 
