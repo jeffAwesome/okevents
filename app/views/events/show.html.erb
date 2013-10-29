@@ -1,10 +1,13 @@
 <style type="text/css">
   body {
     background: transparent url(<%= @event.photo %>) no-repeat 0 0 fixed;
-    background-size: 100% 100%;
+    /*background-size: 100% 100%; */
+    background-size: cover;
+    overflow: auto;
+    display: block;
     min-height: 100%;
     height: auto;
-  }
+    }
 </style>
 
 
@@ -42,8 +45,5 @@
 
 
 <div class="bottom-nav-bar">
-  <% if user_signed_in? %>
-    <%= link_to 'Edit', edit_event_path(@event) %> |
-  <% end %>
     <%= link_to 'Back', events_path %>
 </div>

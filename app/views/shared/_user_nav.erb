@@ -3,6 +3,11 @@
     <ul class="what-to-do">
       <li>Signed in as <%= current_user.email %>.</li>
       <li><%= link_to 'New Event', new_event_path %></li>
+      <% if params[:action] == 'show' %>
+        <li><%= link_to 'Edit Event', edit_event_path(@event) %></li>
+        <li><%= link_to 'Delete Event', event_path(@event),
+             :confirm => 'Are you sure?', :method => :delete %></li>
+      <% end %>
       <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
   </div>
 <% end %>
