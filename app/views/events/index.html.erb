@@ -3,6 +3,7 @@
       <%= link_to event, { class: 'event-show' } do %>
         <% if index == 0 %>
           <article class="span12 okevents large-scale clearfix" style="background-image: url(<%= event.photo %>)">
+            <h1 class="logo">Do This Okay</h1>
         <% else %>
           <article class="span3 okevents" style="background-image: url(<%= event.photo %>)">
         <% end %>

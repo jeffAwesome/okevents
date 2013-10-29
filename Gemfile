@@ -24,6 +24,11 @@ group :test, :development do
   gem 'capybara', '~> 2.1.0'
 end
 
+group :staging, :production do
+    gem 'rails_12factor'  # Heroku gem for logging and asset serving
+end
+
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

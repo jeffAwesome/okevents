@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  background-color: #000;
+  background-color: #111;
   padding: 0;
   &.signedin {
     .contentContainer {
@@ -24,6 +24,16 @@ body {
 h1,h2,h3,h4,h5,h6 {
   margin: 10px 0;
   font-weight: normal;
+}
+
+h1.logo {
+  position: absolute;
+  background: url(dothisokay.png) no-repeat top center;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  text-indent: -9999px;
+  margin: 30px;
 }
 
 #user_nav {
