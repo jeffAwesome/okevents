@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <% @body_class = controller_name.parameterize.to_s+'-'+action_name.to_s %>
@@ -26,6 +25,8 @@
 <%= yield %>
 </div><!--//container-->
 </div><!--//body container -->
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 </body>
 </html>

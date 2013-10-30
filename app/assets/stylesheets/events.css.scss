@@ -22,8 +22,11 @@
       }
     }
     @media screen and (min-width: 1400px) {
-      /*background-size: 100% 100%; */
       background-size: cover;
+    }
+    @media screen and (max-width: 900px) and (min-width: 600px) {
+      max-height: 500px;
+      height: 500px;
     }
     @media screen and (max-width: 600px) {
       max-height: 360px;
@@ -140,6 +143,7 @@
       width: 90%;
       max-width: 740px;
       margin: 0 auto;
+      padding: 35px 0 10px;
     }
 
     h2.event-title {

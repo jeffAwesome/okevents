@@ -34,6 +34,14 @@ h1.logo {
   height: 300px;
   text-indent: -9999px;
   margin: 30px;
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 #user_nav {

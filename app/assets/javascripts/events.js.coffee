@@ -4,4 +4,9 @@
 #
 #
 $(document).ready ->
+  windowHeight = $(window).height()
+  contentHeight = $('.events-show .contentContainer').height()
+
+  if contentHeight < windowHeight
+    $('.events-show .body-container').css('height', windowHeight+'px')
 
