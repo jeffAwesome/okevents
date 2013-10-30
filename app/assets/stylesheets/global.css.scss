@@ -83,6 +83,59 @@ h1.logo {
   }
 }
 
+/* Forms */
+.admin-format {
+  margin: 15px auto;
+  background: #efefef;
+  padding: 15px;
+}
+.sessions-new {
+  .contentContainer {
+    h2 {
+      margin: 2px 0;
+    }
+    width: 400px;
+    border-radius: 6px;
+    @extend .admin-format;
+  }
+}
 
+.events-new, .events-edit {
+  .contentContainer {
+    width: 50%;
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+    }
+    @extend .admin-format;
+    .field {
+      float: left;
+      width: 50%;
+      @media screen and (max-width: 600px) {
+        float: none;
+        width: 100%;
+      }
+      label {
+        margin-left: 10%;
+      }
+      input, textarea {
+        margin-left: 10%;
+        width: 80%;
+      }
+      textarea {
+        min-height: 100px;
+      }
+    }
+    input.btn[type="submit"] {
+      width: 33%;
+      position: relative;
+      margin-left: 33%;
+      margin-top: 20px;
+      height: 35px;
+      line-height: 35px;
+      @media screen and (max-width: 600px) {
+      }
+    }
+  }
+}
 
 /* Settings */
