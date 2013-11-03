@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.where("date >= ?", Date.today).order(:date).all
+    @events = Event.where("date >= ?", Date.today).order(:date).limit(21)
   end
 
   # GET /events/1

@@ -27,16 +27,18 @@
 
   <% share_url = URI::escape(request.original_url) %>
   <% share_text = URI::escape(@event.title) %>
-  <ul class="social-icon">
+  <ul class="social-icon buttons">
     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<%=share_url%>">Share on Facebook</a></li>
     <li><a href="http://twitter.com/share?text=<%= share_text %>&url=<%= share_url %>">Share  on Twitter</a></li>
   </ul>
 
   <div class="event-description">
     <h3 class="about-event">About This Event</h3>
-    <%= @event.description.html_safe %>
+      <%= @event.description.html_safe %>
     <% if @event.website %>
-      <%= @event.website %>
+      <h4>
+        <a href='<%= @event.website %>' target='_blank'>Event Website</a>
+      </h4>
     <% end %>
   </div><!--//event-description-->
 
@@ -45,5 +47,7 @@
 
 
 <div class="bottom-nav-bar">
-    <%= link_to 'Back', events_path %>
+    <ul class="buttons">
+      <li><%= link_to 'Back', events_path %></li>
+    </ul>
 </div>
