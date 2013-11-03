@@ -193,9 +193,14 @@
       @media screen and (max-width: 600px) {
         padding: 50px 6% 40px;
       }
-
       text-align: left;
       min-height: 400px;
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
       h3 {
         &.about-event {
           text-align: center;
