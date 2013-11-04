@@ -138,4 +138,75 @@ h1.logo {
   }
 }
 
+
+footer {
+  width: 213px;
+  margin: 0 auto;
+  padding: 50px 0 50px;
+  h4.fluxx {
+    width: 213px;
+    a {
+      background: url(fluxx.png) no-repeat 0 0;
+      height: 101px;
+      display: block;
+      text-indent: -9999px;
+    }
+  }
+  .social {
+    padding: 25px 0 0;
+    width: 130px;
+    margin: 0 auto;
+    background: url("about-event.png") no-repeat top center;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        float: left;
+        padding: 0 10px;
+        a {
+          display: block;
+          height: 45px;
+          width: 45px;
+          text-indent: -9999px;
+        }
+        &.facebook {
+          a {
+            background: url(facebookbtn.png) no-repeat top center;
+          }
+        }
+        &.twitter {
+          a {
+            background: url(twitterbtn.png) no-repeat top center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.events-show {
+  footer {
+    h4.fluxx {
+      a {
+        background: url(sfluxx.png) no-repeat 0 0;
+      }
+    }
+    .social {
+      ul {
+        li.twitter {
+          a {
+            background: url(stwitterbtn.png) no-repeat top center;
+          }
+        }
+        li.facebook {
+          a {
+            background: url(sfacebookbtn.png) no-repeat top center;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Settings */
